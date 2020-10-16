@@ -187,6 +187,35 @@ class Xbox360(Gamepad):
         self._setupReverseMaps()
 
 
+class XboxOne(Gamepad):
+    fullName = 'Xbox One wireless controller'
+
+    def __init__(self, joystickNumber = 0):
+        Gamepad.__init__(self, joystickNumber)
+        self.axisNames = {
+            0: 'LEFT-X',
+            1: 'LEFT-Y',
+            2: 'RIGHT-X',
+            3: 'RIGHT-Y',
+            4: 'RT',
+            5: 'LT',
+            6: 'DX',
+            7: 'DY'
+        }
+        self.buttonNames = {
+            0:  'A',
+            1:  'B',
+            3:  'X',
+            4:  'Y',
+            6:  'LB',
+            7:  'RB',
+            11: 'MODE',
+            13: 'LA',
+            14: 'RA'
+        }
+        self._setupReverseMaps()
+
+
 class MMP1251(Gamepad):
     fullName = "ModMyPi Raspberry Pi Wireless USB Gamepad"
 
